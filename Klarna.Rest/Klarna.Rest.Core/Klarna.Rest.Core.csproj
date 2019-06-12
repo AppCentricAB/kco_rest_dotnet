@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard1.1</TargetFramework>
     <Version>3.1.3</Version>
     <AssemblyName>Klarna.Rest.Core</AssemblyName>
     <AssemblyTitle>Klarna Checkout REST .NET SDK</AssemblyTitle>
@@ -10,14 +10,8 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\'))</SolutionDir>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <SignAssembly>true</SignAssembly>
-    <DelaySign>true</DelaySign>
-    <AssemblyOriginatorKeyFile>..\private.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.0\Klarna.Rest.Core.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard1.1\Klarna.Rest.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -45,8 +39,4 @@
       </PropertyGroup>
     </Otherwise>
   </Choose>
-  <Target Name="Sign">
-    <Error Condition=" !Exists('$(SignKey)') And '$(Configuration)'=='Release' " Text="Sign key missing" />
-    <Exec Command="$(SignCommand)" />
-  </Target>
 </Project>

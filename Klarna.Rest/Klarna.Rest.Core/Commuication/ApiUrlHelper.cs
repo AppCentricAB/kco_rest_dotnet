@@ -1,4 +1,5 @@
-﻿using System.Collections.Specialized;
+﻿using Klarna.Rest.Core.NetStandard_1_1;
+using System.Collections.Specialized;
 using System.Linq;
 
 namespace Klarna.Rest.Core.Commuication

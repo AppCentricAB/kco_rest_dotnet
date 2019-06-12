@@ -7,6 +7,7 @@ using Klarna.Rest.Core.Commuication;
 using Klarna.Rest.Core.Commuication.Dto;
 using Klarna.Rest.Core.Model;
 using Klarna.Rest.Core.Serialization;
+using Klarna.Rest.Core.NetStandard_1_1;
 
 namespace Klarna.Rest.Core.Store
 {
